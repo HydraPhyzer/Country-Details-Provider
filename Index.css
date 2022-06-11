@@ -1,0 +1,109 @@
+:root
+{
+    --ColorA : #1A1A1A;
+    --ColorB : #D9EFF7;
+    --ColorC : #9BBBFC;
+    --ColorD : #4741A6;
+    --ColorE : #F9CE69;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width:fit-content;
+    margin: auto;
+}
+.Main
+{
+    width:fit-content;
+    border: 3px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+.Main >div
+{
+    margin: 10px 0px;
+}
+.Search
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}
+input ,button
+{
+    padding: 5px 20px;
+    border-radius: 0px;
+    outline: none;
+    border: 2px solid black;
+    margin: 10px 0px;
+}
+button
+{
+    background-color:#1A1A1A;
+    color: white;
+}
+img
+{
+    width: 100%;
+}
+.Name
+{
+    width: 100%;
+    text-align: center;
+    background-color: #F9CE69;
+    color: #1A1A1A;
+    padding: 10px 5px;
+}
+.Info
+{
+    display: grid;
+    grid-template-columns: repeat(3,1FR);
+    grid-gap: 10PX;
+    text-align: center;
+}
+.Info >div h4
+{
+    padding: 5px 10px;
+    color: #1A1A1A;
+    background-color: #F9CE69;
+}
+.Info
+{
+    display: none;
+}
+.Flag
+{
+    display: none;
+}
+@media (max-width:690px)
+{
+    .Search
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .Info
+    {
+        grid-template-columns: repeat(auto-fit,minmax(50%,1fr));
+    }
+}
+@media (max-width:490px)
+{
+    .Main
+    {
+        width: 90%;
+    }
+}
